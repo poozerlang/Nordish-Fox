@@ -11,4 +11,4 @@ Inside mozilla.cfg replace "file:///C:/<path removed>/newtab.html" to the direct
 
 ## Preview
 
-
+https://github.com/poozerlang/Nordish-Fox/blob/master/NordishFox.PNG

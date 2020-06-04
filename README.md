@@ -11,4 +11,4 @@ Inside mozilla.cfg replace "file:///C:/<path removed>/newtab.html" to the direct
 
 ## Preview
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/g7l66St" data-context="false" ><a href="//imgur.com/a/g7l66St"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+

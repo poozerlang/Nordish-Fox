@@ -1,6 +1,8 @@
 # Nordish-Fox
 Theme for Firefox 77
 
+## I use the font Ubuntu which you can find here https://assets.ubuntu.com/v1/0cef8205-ubuntu-font-family-0.83.zip otherwise you have to change it in the userchrome file.
+
 ## Startpage
 
 

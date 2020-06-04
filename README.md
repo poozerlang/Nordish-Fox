@@ -1,6 +1,8 @@
 # Nordish-Fox
 Theme for Firefox 77
 
+*b* wtf
+
 
 To use the custom startpage, make sure the folder is placed inside your profile folder, and place localsettings.js in Program Files\Mozilla Firefox\defaults\pref and mozilla.cfg in Program Files\Mozilla Firefox\.
 

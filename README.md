@@ -11,4 +11,4 @@ Inside mozilla.cfg replace "file:///C:/<path removed>/newtab.html" to the direct
 
 ## Preview
 
-![Alt text](https://github.com/poozerlang/Nordish-Fox/blob/master/NordishFox.PNG?raw=true "Title")
+![Alt text](https://github.com/poozerlang/Nordish-Fox/blob/master/Preview.png?raw=true "Title")

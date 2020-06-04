@@ -1,0 +1,1070 @@
+/*** Global settings ***/
+
+:root{
+	--main--: #24292E;
+	--hover---: #373C42;
+	--inactive--: #1E2124;
+	--navbuttons--: #E7E7E7;
+	--dialog-buttons--: #2b2b2b;
+	--active-tab--: #1E2124;
+	--tab-hover--: #2F3136;
+	--tab-toolbar--: #2A2E32;
+	--main-text--: #E7E7E7;
+	--hover-text--: #FFF;
+	--border-color--: #3DAEE9;
+	--tab-min-height_tnot: 32px;
+}
+
+/*** Global UI font ***/ * { font-family: Ubuntu  !important; } * { font-size: 10pt !important; } * 
+
+/*** Text Highlight Color ***/
+
+::-moz-selection {background: gray !important;}
+
+/*** Replaces Flexiable Spaces With Separators ***/
+
+#main-window:not([customizing]) #nav-bar toolbarspring {
+	-moz-appearance: separator !important;
+	-moz-margin-start: 10px !important;
+	min-width: 1px !important;
+	max-width: 1px !important;
+	margin: 8px !important;
+	opacity: .3 !important;
+}
+
+
+/*** Extension Colors ***/
+
+#ublock0_raymondhill_net-browser-action:not(:hover):not([open]) {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%); !important;
+}
+
+#_446900e4-71c2-419f-a6a7-df9c091e268b_-browser-action:not(:hover):not([open]) {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%); !important;
+}
+
+#umatrix_raymondhill_net-browser-action:not(:hover):not([open]) {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%); !important;
+}
+
+/*** Selection box checks ***/
+
+richlistitem > image,
+radio > .radio-check,
+checkbox > .checkbox-check{
+	-moz-appearance: none !important;
+	border: 1px solid var(--border-color--);
+	border-radius: 2px;
+	height: 1.3em;
+	width: 1.3em;
+	padding: 1px;
+	background: var(--main--) !important;
+	fill: white !important;
+}
+
+
+richlistitem:not([disabled]):hover > image,
+radio:not([disabled]):hover > .radio-check,
+checkbox:not([disabled]):hover > .checkbox-check{ 
+	background: var(--hover---)!important;
+	fill: var(--main-text--) !important;
+	transition: ease .5s;
+}
+
+
+
+richlistitem[checked] > image,
+radio[selected] > .radio-check,
+checkbox[checked] > .checkbox-check{
+	list-style-image: url("chrome://global/skin/icons/check.svg");
+	-moz-context-properties: fill;
+	background: var(--main--) !important;
+}
+
+
+/*** Dialog Boxes ***/
+
+dialog {
+	background: var(--main--) !important;
+	color: var(--main-text--) !important;
+}
+
+
+/*** Dialog Box Buttons ***/
+
+button {
+	-moz-appearance: none !important;
+	background: var(--dialog-buttons--) !important;
+	color: var(--main-text--) !important;
+	border: none !important;
+	border-radius: 2px !important;
+	min-height: 28px !important;
+	border-bottom: 2px solid transparent !important;
+}
+
+button:hover {
+	background: var(--hover---) !important;
+	color: var(--hover-text--) !important;
+	border-bottom: 2px solid var(--border-color--)!important;
+}
+
+
+
+/*****************************************************************MENUS****************************************************/
+
+
+menupopup, popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup,
+#context-navigation,
+#widget-overflow-mainView  .panel-subview-body{
+	-moz-appearance: none !important;
+	padding: 2px 2px 2px 2px !important;
+	background: var(--main--)!important;
+	border: none !important;
+	border-radius: 0px !important;	
+	min-width: 100px !important;	
+	box-shadow: 0px 0px 0px 1px var(--box-shadow--) !important;
+}
+
+
+menupopup menu, menuitem,
+#widget-overflow toolbarbutton{
+	-moz-appearance: none !important;
+	color: var(--main-text--)!important;
+	padding: 8px 0px 8px 0px !important;
+	box-sizing: border-box !important; 
+	border-bottom: 2px solid transparent !important;
+}
+
+
+menupopup menu:hover, menuitem:hover,
+#widget-overflow toolbarbutton:hover,
+#BMB_bookmarksPopup .bookmark-item:hover{
+	-moz-appearance: none !important;
+	background: var(--hover---)!important;
+	color: var(--hover-text--)!important;
+	padding: 8px 0px 8px 0px !important;
+	box-sizing: border-box !important; 
+	border-bottom: 2px solid var(--border-color--) !important;
+	border-radius: 4px !important;
+	box-shadow: 0px 0px 0px 0px var(--box-shadow--) !important;
+}
+
+/*** Hides default blue background when not actively hovering in sub-menus **/
+
+menupopup menuitem, menu:not(:hover):not([active]) {
+	background: none !important;
+}
+
+
+/*** Separators ***/
+
+menuseparator{
+	-moz-appearance: none !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+	border-top-color: transparent !important;
+	border-bottom-color: transparent !important;
+}
+
+
+/***Changes context menu arrows***/   
+
+.menu-right {         
+	-moz-appearance: none !important;
+	list-style-image: url("image/forward.svg") !important;
+	transform: rotate(0deg) scale(.5);
+}
+
+menu:hover > .menu-right{ filter: invert(1) }
+
+
+/***Shows the arrow up top when opening menus***/
+
+.panel-arrow {      
+	display:visible !important;
+	fill: var(--navbuttons--) !important;
+}
+
+
+/***Moves main menu icon to top left****/
+
+#PanelUI-button{
+	-moz-box-ordinal-group: 0 !important;
+	margin-inline-end: 0px !important;
+	margin-top: -1px !important;
+}
+
+
+
+/***Changes the appearance of the Main Menu Icon***/
+
+#PanelUI-menu-button {                  
+	list-style-image: url("chrome://branding/content/identity-icons-brand.svg") !important;
+	width: 38px !important;
+	height: 38px !important;
+	padding: 0px !important;	
+	margin-left: -20px !important;	
+	background: var(--main--) !important;
+}
+
+
+#PanelUI-menu-button .toolbarbutton-icon {
+	width: 20px !important;
+	height: 21px !important;
+}
+
+/***Changes main menu contents***/
+
+.PanelUI-subView, .subviewbutton {              
+	background: var(--main--)!important;
+	color: var(--main-text--) !important;	
+	box-sizing: border-box !important; 
+	border-bottom: 2px solid transparent !important;
+}
+
+
+#PanelUI, .subviewbutton:hover,
+#PanelUI-contents toolbarbutton:hover{
+	box-sizing: border-box !important; 
+	border-bottom: 2px solid var(--border-color--) !important;
+	border-radius: 4px !important;
+	background: var(--hover---) !important;
+	color: var(--hover-text--) !important;
+	box-shadow: 0px 0px 0px 0px var(--box-shadow--) !important;	
+}
+
+
+/***Adjusts the separators within the main menu***/
+
+#PanelUI, toolbarseparator{               
+	-moz-appearance: none !important;
+	padding-top: 10px !important;
+	padding-bottom: 0px !important;
+	margin-top: 2px !important;
+	margin-bottom: 2px !important;
+	border-top-color: transparent !important;
+	border-bottom: none !important;
+}
+
+
+/***Change main menu flyout arrows***/
+
+.subviewbutton-nav::after {      
+	fill: var(--navbuttons--) !important;
+	fill-opacity: 1 !important;
+}
+
+.subviewbutton-nav:hover::after {  
+	fill: var(--main--) !important;
+	fill-opacity: 1 !important;
+}
+
+/*****************************************************************TABS*********************************************************************/
+
+.titlebar-button, .titlebar-button > image{ 
+	background: transparent !important;
+	fill: green !important;
+}
+
+#TabsToolbar   {
+	min-height: 0 !important;
+	height: var(--tab-min-height_tnot) !important;
+	max-height: unset !important;
+	background: var(--tab-toolbar--) !important;
+}
+
+#tabbrowser-tabs,
+#tabbrowser-tabs > .tabbrowser-arrowscrollbox,
+.tabbrowser-tabs[positionpinnedtabs] > .tabbrowser-tab[pinned] {
+	min-height: var(--tab-min-height_tnot) !important;
+}
+
+
+/*** Hides space before first tab ***/
+
+.titlebar-spacer[type="pre-tabs"]{display: none}
+.titlebar-spacer[type="post-tabs"]{margin-left: 100px;}
+
+
+/*** Curved Tabs ***/
+
+.tabbrowser-tab {
+	border-radius: 6px 6px 0px 0px / 6px 6px 0px 0px !important;}
+
+
+.tab-background[selected="true"],
+.tabbrowser-tab[selected="true"]:-moz-lwtheme { 
+	margin-left: -1px !important;
+	margin-right: -1px !important;
+	border-radius: 6px 6px 0px 0px / 6px 6px 0px 0px !important;
+	position: relative !important;
+	color: var(--main-text--) !important;
+	background: var(--main--) !important;
+	border-top: 1px solid var(--border-color--) !important;
+}
+
+
+/*** Inactive Tab ***/
+
+tab:not([selected="true"]) { 	
+	background: var(--tab-toolbar--) !important;
+	color: var(--main-text--) !important;
+}
+
+/***Inactive Tab on Hover***/
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]):not([multiselected]){ 
+	background: var(--tab-hover--) !important;
+	border-top: 1px solid var(--border-color--) !important;
+	transform: scaleX(-1);	
+	transition: ease 0.2s !important;
+	min-height: 1px !important;
+	border-radius: 6px 6px 0px 0px / 6px 6px 0px 0px !important;
+}
+
+
+/***Text Color of inactive tab on hover***/
+
+.tabbrowser-tab:hover .tab-content:not([selected="true"]) {
+	color: var(--main-text--) !important;
+}
+
+
+/***Auto-hides close button***/
+
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+	display: -moz-box !important;
+	opacity: 0;
+	visibility: collapse !important;
+	transition: opacity 0.8s, visibility 0.0s ease !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+	opacity: 1;
+	visibility: visible !important;
+}
+
+
+/*** Tab-line ***/
+
+.tab-line {	
+	display: none;
+	-moz-box-ordinal-group: 1;	
+	background: var(--hover---) !important;
+	transition: ease 0.5s !important;
+	min-height: 2px !important;
+	margin-left: 0px;
+	margin-right: 0px;	
+	border-radius: 6px 6px 0px 0px / 6px 6px 0px 0px !important;
+}
+
+/*** Hides Tab-line for active tab ***/
+
+.tab-line[selected="true"] {
+	display: none;
+
+}
+
+/*** Hides container extensions tab-lines ***/
+
+.tab-bottom-line {
+	display: none;
+}
+
+
+/****Tab Separators***/
+
+.tabbrowser-tab[first-visible-tab]::before{   /***Gives very first tab a border***/
+	content: ""; 
+	display: -moz-box;
+	border: 0px solid var(--border-color--) !important;
+	margin: 0px !important;
+	margin-top: 10px !important;
+	opacity: 0 !important;
+}  
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+	margin-bottom: 9px !important;
+	margin-top: 9px !important;
+	background: red !important;
+	opacity: .5 !important;
+}
+
+.tabbrowser-tab:hover::after,
+.tabbrowser-tab[multiselected]::after,
+#tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[beforehovered]::after,
+#tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[before-multiselected]::after { 
+	visibility: hidden !important;
+}
+  
+#tabbrowser-tabs:not([movingtab]) > .tabbrowser-tab[beforeselected-visible]::after,
+#tabbrowser-tabs[movingtab] > .tabbrowser-tab[visuallyselected]::before,
+.tabbrowser-tab[visuallyselected]::after,
+.tabbrowser-tab:last-of-type::after {
+	visibility: hidden !important;
+}
+
+
+/*** New Tab Button ***/
+
+#tabs-newtab-button.toolbarbutton-1 .toolbarbutton-icon {
+	opacity: 1 !important;
+	border-radius: 2px !important;
+	width: 24px !important;
+	height: 24px !important;
+	margin-left: 2px !important;
+	margin-top: 2px !important;
+}
+
+
+/*** Tab loading animation ***/
+
+.tab-throbber { 
+	display: none !important; 
+}
+
+.tab-icon-image { 
+	visibility: show !important; 
+	display: block !important;
+}
+
+.tabbrowser-tab[progress="true"] .tab-icon-image { 
+	opacity:0.45; 
+	filter: blur(1px);
+}
+
+.tab-loading-burst[bursting]::before {
+	background: var(--hover---) !important;
+}
+
+/*****************************************************************Navbar*********************************************************************/
+
+
+#nav-bar {
+	background: var(--main--) !important;
+	margin-top: 0px !important;	
+	box-shadow: none !important;
+	padding-right: 0px; 
+	padding-left: 10px;
+	z-index: 2 !important;
+}
+
+/*** Removes the 1px black line below bar ***/
+
+#navigator-toolbox {
+	border: none !important;
+}
+
+
+/***Changes buttons***/
+
+
+.toolbarbutton-1 { 
+ --toolbarbutton-hover-background: var(--hover---) !important; 
+ --toolbarbutton-hover-: none !important;
+	 fill: var(--navbuttons--) !important;
+}
+
+#back-button .toolbarbutton-icon{
+	background: transparent !important;
+	border: none !important;
+	border-radius: 4px !important;
+	width: 32px !important;
+	height: 32px !important;
+	list-style-image: url("image/back.svg") !important;
+}
+
+#back-button:hover:not([disabled]) .toolbarbutton-icon {
+	background-color: var(--toolbarbutton-hover-background) !important;
+}
+
+
+#forward-button .toolbarbutton-icon {  
+	list-style-image: url("image/forward.svg") !important;
+}
+
+
+#tabs-newtab-button.toolbarbutton-1 .toolbarbutton-icon {
+	opacity: 1 !important;
+	border-radius: 2px !important;
+	width: 24px !important;
+	height: 24px !important;
+	margin-left: 2px !important;
+	margin-top: 2px !important;
+}
+
+/*** Downloads Button after successful download ***/
+
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > 
+#downloads-indicator-anchor > #downloads-indicator-icon,
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > 
+#downloads-indicator-anchor > #downloads-indicator-progress-outer  {
+	fill: var(--navbuttons--) !important;
+}
+
+/*** Downloads Panel Dropdown ***/
+
+.downloadsPanelFooterButton {
+	background: var(--main--) !important;
+	margin-top: 1px !important;
+}
+
+/*** Custom Images ***/
+
+#home-button .toolbarbutton-icon {
+	list-style-image: url("image/home.png") !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+#nav-bar toolbarbutton#reload-button .toolbarbutton-icon {
+	list-style-image: url("image/reload.png") !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+#nav-bar toolbarbutton#stop-button .toolbarbutton-icon {
+	list-style-image: url("image/stop.png") !important;
+	width: 32px !important;
+	height: 32px !important;
+}
+
+/*** Remove load/stop button animations ***/
+
+toolbar:not(#TabsToolbar) #stop-button .toolbarbutton-animatable-image,
+toolbar:not(#TabsToolbar) #reload-button .toolbarbutton-animatable-image {
+	visibility: collapse !important;
+}
+
+toolbar:not(#TabsToolbar) #stop-reload-button[animate] > #reload-button > .toolbarbutton-icon,
+toolbar:not(#TabsToolbar) #stop-reload-button[animate] > #reload-button[displaystop] + #stop-button > .toolbarbutton-icon {
+	fill: unset !important;
+}
+
+toolbar toolbaritem .toolbarbutton-1[disabled] .toolbarbutton-text,
+toolbar .toolbarbutton-1[disabled]:not([type="menu-button"]) .toolbarbutton-text,
+toolbar .toolbarbutton-1[type="menu-button"] toolbarbutton[disabled] .toolbarbutton-text{
+	opacity: 0.6 !important;
+}
+
+#star-button[starred] {
+	fill: #3DAEE9 !important;
+}
+
+#star-button[starred]:hover {
+	fill: black !important;
+}
+
+
+
+/*** Downloads Button after successful download ***/
+
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > 
+#downloads-indicator-anchor > #downloads-indicator-icon,
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > 
+#downloads-indicator-anchor > #downloads-indicator-progress-outer {
+	fill: var(--navbuttons--) !important;
+}
+
+/*** Downloads Panel Dropdown ***/
+
+.downloadMainArea, .downloadIconShow, panelview {
+	background: var(--main--) !important;
+}
+
+
+/*****************************************************************URL Bar*********************************************************************/
+
+
+  /*** General Preferences ***/
+:root {
+    /*** Number of pixels of enlargement when URL bar is focused ***/
+    --mbarstyler-popout-pixels: 0px !important;
+}
+
+/*** Prevent shift of URL bar contents ***/
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+	height: var(--urlbar-height) !important;
+	padding: 0 !important;
+  }
+
+#urlbar[breakout][breakout-extend] {
+	top: calc(5px - var(--mbarstyler-popout-pixels)) !important;
+	left: calc(0px - var(--mbarstyler-popout-pixels)) !important;
+	width: calc(100% + (2 * var(--mbarstyler-popout-pixels))) !important;
+	padding: var(--mbarstyler-popout-pixels) !important;
+  }
+ 
+
+/*** Appearance/Position ***/
+
+#urlbar{
+	max-width: 968px  !important;		
+	margin-left: 300px  !important;	
+	border-radius: 2px !important;
+	color: var(--main-text--) !important;	
+	border-left: 2px solid var(--border-color--) !important;
+	border-right: 2px solid var(--border-color--) !important;
+	
+}
+
+#urlbar-input-container{
+	background: var(--inactive--)  !important;	
+	text-align: center !important;
+}
+
+/*** Hides blue border ***/
+
+#urlbar-background,
+#urlbar-container,
+.urlbar-input-box {
+	border:none !important;
+}
+
+
+/***When Hovering***/
+
+#urlbar-input-container:hover {
+	background: var(--hover---) !important;	
+	transition: ease .5s !important;
+}
+
+/***When Selected***/
+
+#urlbar[focused="true"]:-moz-lwtheme {  
+	color: var(--main-text--) !important;	
+	border: none !important;
+}
+
+
+/***Changes Default Placeholder Text (Search with Bing or Enter Address)***/
+
+#urlbar-input::placeholder {
+	opacity: 0 !important;
+	color: #fff !important;  
+}
+
+
+/***Buttons***/
+
+#urlbar-container .urlbar-icon {
+	display: visible !important;
+	fill-opacity: 1 !important;
+}
+
+
+#urlbar-container .urlbar-go-button {
+	display:visible !important;
+}
+
+#urlbar-container .urlbar-history-dropmarker {
+	background: transparent !important;
+	
+}
+
+/***Dropdown Results***/
+
+
+.urlbarView{
+	margin-left: -2px  !important;	
+	width: 972px !important;
+	box-shadow: none !important;
+	
+}
+
+
+#urlbarView-results, #urlbar-results{ 
+	background: var(--inactive--) !important;
+	margin-top: -1px !important;
+	height: unset !important;
+	max-height: calc(75.4px *6) !important;
+}
+
+.urlbarView-row{
+	padding: 15px 0 !important;
+	box-sizing: border-box !important; 
+	border-bottom: 2px solid transparent !important;
+	box-shadow: 0px 1px 0px 0px rgb(255,255,255,.1) !important;
+}
+
+
+/*** Hides "visit" first row result ***/
+
+#urlbarView-row-0{
+	display: none !important;
+}
+
+
+/***When Hovering***/
+
+#urlbar-results .urlbarView-row:hover{	
+	-moz-appearance: none !important;
+	box-sizing: border-box !important; 
+	border-bottom: 2px solid var(--border-color--) !important;
+	border-radius: 6px !important;
+	background: var(--hover---) !important;
+	color: var(--hover-text--)!important;
+}
+
+
+
+/***Two Row Results***/
+
+.urlbarView-row-inner{ 
+	flex-wrap: wrap !important; 
+	background:none !important;
+}
+
+.urlbarView-title[title]{ 
+	flex-grow: 1; 
+}
+
+.urlbarView-row > .urlbarView-row-inner > .urlbarView-url{ 
+	margin-inline-start: 24px; 
+	min-width: 95% 
+}
+
+.urlbarView-row[has-url]:not([type="switchtab"]) .urlbarView-title-separator{ 
+	display: none 
+}
+
+/*** Identity Box Popup Menu ***/
+
+#protections-popup-mainView-panel-header,
+#protections-popup-tp-switch{
+	background: grey !important;
+	color: var(--main-text--) !important;
+}
+
+#protections-popup-not-blocking-section-why{
+	color: var(--main-text--) !important;
+}
+
+/*****************************************************************Bookmarks Toolbar*********************************************************************/
+
+
+/*** Auto-Hide ***/
+
+#PersonalToolbar{ 
+	display: flex !important;
+	justify-content: center !important;
+	height: 30px !important;
+	background: var(--main--) !important;	
+	color: var(--main-text--) !important;		
+	transition: margin 250ms ease !important;
+	position: fixed !important;
+	width: 100% !important;
+	z-index: 1 !important;
+	margin-top: -30px;	
+}
+
+#nav-bar{ z-index: 1; }
+
+#nav-bar:hover + #PersonalToolbar,
+
+#PersonalToolbar:hover{
+
+	margin-top: 0px;
+
+	margin-bottom: 0px;
+}		
+
+
+/***Hides Folder Icons***/
+
+#PersonalToolbar toolbarbutton.bookmark-item[type="menu"] .toolbarbutton-icon {
+	display: none !important;
+}
+
+
+#PersonalToolbar toolbarbutton.bookmark-item {
+	border-bottom: 2px solid transparent !important;
+}
+
+
+/***Hover Effect***/
+
+#PersonalToolbar toolbarbutton.bookmark-item:hover {
+	background: var(--hover---) !important;	
+	color: var(--hover-text--) !important;
+	border-bottom: 2px solid var(--border-color--)!important;
+}
+
+
+/***Adds Seperator at the bottom of Dropdown Menu***/
+
+#personal-bookmarks .bookmarks-actions-menuseparator {
+	border-top: 0px solid var(--border-color--) !important;
+}
+
+
+/*** Centers "Open All in Tabs" text ***/
+
+#personal-bookmarks .openintabs-menuitem {
+	text-align: center;
+}
+
+
+
+
+
+/*****************************************************************Bookmarks Menu/Button*********************************************************************/
+
+
+/*** Selector Fields ***/
+
+#editBMPanel_folderMenuList,
+#editBMPanel_namePicker,
+#editBMPanel_tagsField{
+	-moz-appearance: none !important; 
+	background: var(--inactive--) !important;
+	color: var(--main-text--) !important;
+	border: 1px solid var(--border-color--) !important;
+	border-radius: 2px;
+}
+
+
+/*** Fields on Hover ***/
+
+#editBMPanel_namePicker:hover,
+#editBMPanel_folderMenuList:hover,
+#editBMPanel_tagsField:hover {
+	border: 1px solid var(--border-color--) !important;
+	box-shadow: 0px 0px 0px 0px #fff !important;
+	background: var(--hover---) !important;
+	color: var(--hover-text--) !important;
+	transition: ease .5s !important;
+}
+
+
+/*** Field dropdown menus ***/
+
+#editBMPanel_folderTree,
+#editBMPanel_tagsSelectorRow richlistbox{
+	-moz-appearance: none !important;
+	background: var(--inactive--)!important;
+	color: var(--main-text--) !important;
+	border: none !important;
+	border-radius: 4px;
+	min-height:350px !important;
+}
+
+
+/*** Expander Arrows ***/
+
+#editBMPanel_tagsSelectorExpander,
+#editBMPanel_foldersExpander{
+	-moz-appearance: none !important;
+	background: var(--inactive--) !important;
+	border: 1px solid var(--border-color--) !important;
+	border-radius: 2px;
+	min-width: 13px !important;
+	min-height: 13px !important;
+}
+
+
+/*** Bottom Buttons ***/
+
+.editBookmarkPanelBottomButton {
+	color: var(--main-text--) !important;
+	background: var(--main--) !important;
+	border: none !important;
+	border-radius: 2px !important;
+	border-bottom: 2px solid transparent !important;
+}
+
+.editBookmarkPanelBottomButton:hover {
+	color: var(--hover-text--) !important;
+	background: var(--hover---) !important;
+	border-radius: 2px !important;
+	border-bottom: 2px solid var(--border-color--) !important;
+}
+
+
+/*** Bookmarks Popup Menu Only ***/
+
+#BMB_bookmarksPopup .bookmark-item, .panel-arrowcontent {
+	background: var(--main--) !important;
+}
+
+
+
+
+
+/*****************************************************************Sidebar*********************************************************************/
+ 
+
+/*** Auto-Hide Properties ***/
+
+#sidebar-box{
+	--uc-sidebar-width: 1px;
+	--uc-sidebar-hover-width: 220px;
+	position: relative;
+	min-width: var(--uc-sidebar-width) !important;
+	width: var(--uc-sidebar-width) !important;
+	max-width: var(--uc-sidebar-width) !important;
+	z-index:1;
+}
+
+#sidebar-header{ 
+	overflow: hidden; 
+	color: var(--chrome-color, inherit) !important}
+
+#sidebar{
+	transition: min-width 115ms ease !important;
+	min-width: var(--uc-sidebar-width) !important;
+	will-change: min-width;
+}
+
+#sidebar-box:hover > #sidebar{ 
+	min-width: var(--uc-sidebar-hover-width) !important;
+}
+
+
+/*** General Appearance ***/
+
+#sidebar,
+#sidebar-header,
+#bookmarksPanel,
+#bookmarks-view,
+#history-panel,
+#historyTree,
+#sidebar-switcher-target,
+#viewButton{
+	background: var(--main--) !important;
+	color: #fff !important;
+	border: 0px solid transparent !important;
+	box-sizing: border-box !important;
+}
+
+
+/*** Hides Side Bar Header ***/
+
+#sidebar-switcher-target,
+#sidebar-header{
+	display: visible;
+}
+
+
+/*** Headers on hover ***/
+
+.sidebar-placesTreechildren::-moz-tree-cell(hover),
+.sidebar-placesTreechildren::-moz-tree-row(selected),
+#sidebar-switcher-target:hover,
+#viewButton:hover {
+	color: var(--hover-text--) !important;
+	background: var(--hover---) !important;
+	border-radius: 2px !important;
+}
+
+.sidebar-placesTreechildren::-moz-tree-cell-text(hover),
+.sidebar-placesTreechildren::-moz-tree-cell-text(selected){
+	color: var(--hover-text--) !important;
+}
+
+
+.sidebar-placesTree treechildren::-moz-tree-separator { 
+	border-color: var(--border-color--) !important;
+  
+}
+
+
+/*** Text Input Box ***/
+
+#search-box {
+	-moz-appearance: none !important;
+	height: 40px;
+	border-radius: 2px;
+	background: var(--main--) !important;
+	color: var(--main-text--) !important;
+}
+
+#search-box:hover {
+	background-color: var(--hover---) !important;
+	color: var(--hover-text--) !important;
+}
+
+
+
+
+
+
+
+
+/*****************************************************************Status Bar*********************************************************************/
+
+#statuspanel #statuspanel-label {
+	-moz-appearance: none !important;
+	color: var(--main-text--) !important;
+	background: var(--main--) !important;
+	border: none !important;
+	padding: 6.5px !important;
+	
+}
+
+
+
+
+/*****************************************************************Findbar*********************************************************************/
+
+
+findbar {
+	-moz-box-ordinal-group: 0 !important;
+	margin-top: -4px !important;
+	position: relative !important;
+}
+
+.findbar-container {
+	background: var(--main--) !important;
+}
+
+.findbar-container label {
+	color: var(--main-text--) !important;
+}
+
+.findbar-closebutton {
+	color: #fff !important;
+	background: var(--main--) !important;
+}
+
+
+.findbar-textbox {
+	color: var(--main-text--) !important;
+	background: var(--inactive--) !important;
+	border-left: 1px solid var(--border-color--) !important;
+	border-right: 1px solid var(--border-color--) !important;
+	border-bottom: none !important;
+	border-top: none !important;
+	border-radius: 4px !important;
+}
+
+.findbar-textbox:hover {
+	background: var(--hover---) !important;
+	transition: ease all .5s !important;
+	color: var(--hover-text--) !important;
+}
+
+
+.findbar-textbox:not(.minimal):-moz-locale-dir(rtl),
+.findbar-textbox:-moz-locale-dir(ltr)~.findbar-find-next:hover,
+.findbar-find-previous:hover{
+	background: var(--hover---) !important;
+ 	color: var(--hover-text--)  !important;
+	fill-opacity: 1 !important;
+	border-radius: 2px !important;
+}
+
+.findbar-textbox~toolbarbutton{ 
+	background: var(--main--) !important;
+	border: none !important;
+}
+
